@@ -1,25 +1,61 @@
 html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 body {
   background-color: #88bcf2;
   background-image: linear-gradient(180deg, #88bcf2 25%, #f7e256 100%);
-min-width:100vw;
-min-height:100vh;
-font-size:20px;  
+  min-width: 100vw;
+  min-height: 100vh;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  
+
+}
+
+.form__article {
+  padding: 0px 20px;
+}
+
+.form__item {
+  display: block;
+  width: 60vw;
+  border:none;
+}
+
+.header {
+
+  background-image:url('../contest/IMG/image2.jpg');
+  background-position:center center;
+  background-size:cover;
+  margin-top: 0;
+  min-width: 100vw;
+  line-height: 40px;
+  padding:20px;
+
 }
 
 h1 {
   color: #370617;
+  margin-top: 0;
+  padding-top: 20px;
 }
 
 h2 {
-  color:#03071E
+  color: #03071e;
+}
+
+.special {
+  font-weight: bold;
+  color: #6a040f;
+  font-size:20px;
 }

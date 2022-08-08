@@ -4,31 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formularz kontaktowy</title>
+    <title>Konkurs</title>
     <link href="normalize.css" rel="stylesheet" type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <header>
-      <h1>Konkurs z nagrodami</h1>
-      <p>
-        Witam Cię serdecznie w Konkursie "Lato z książką". Wakacje to najlepszy
-        moment na nadrabianie zaległości literackich oraz zdobywanie nowych,
-        ciekawych nagród. Zapraszam Cię do konkursu."
-      </p>
+    <header class="header">
+      <div>
+        <h1>Konkurs z nagrodami!</h1>
+        <p>
+          Witam Cię serdecznie w Konkursie
+          <span class="special">"Lato z książką"</span>.<br />
+          Wakacje to najlepszy moment na nadrabianie zaległości literackich oraz
+          zdobywanie nowych, ciekawych nagród.<br />
+          <span class="special">Zapraszam Cię do konkursu.</span>
+        </p>
+      </div>
     </header>
 
     <main class="main">
       <form class="form">
         <article class="form__article">
-          <h2 class="form__heading">Pytania konkursowe</h2>
-          <p class="form__task"></p>
-          <p>
-            <label>Autor:<input id="tittle" name="tittle" /></label>
+          <h2 class="form__heading">Pytanie konkursowe</h2>
+          <p class="form__task">
+            Skup się, gdyż za chwilę zaczynamy. Odpowiedz na pytanie i zgarnij
+            nagrodę.
           </p>
-          <p>
-            <label>Uzasadnienie:<input id="tittle" name="tittle" /></label>
-          </p>
+          <div class="form__question">
+            <p>
+              <span class="special"
+                >Jak nazywa się Twoja ulubiona książka?</span
+              >
+            </p>
+            <p>
+              <label>Tytuł:</label>
+              <input class="form__item" id="tittle" name="tittle" placeholder="Wpisz pełny tytuł książki"/>
+            </p>
+            <p>
+              <label>Autor:</label>
+              <input class="form__item" id="tittle" name="tittle" placeholder="Wpisz imię i nazwisko autora" />
+            </p>
+            <p>
+              <label>Uzasadnienie:</label>
+              <textarea class="form__item" id="tittle" name="tittle">Najbardziej cenię tę właśnie książkę, gdyż...</textarea>
+            </p>
+          </div>
         </article>
 
         <article class="form__article">
@@ -36,6 +56,49 @@
           <p class="form__task">
             Pozwól nam poznać Cię lepiej. Uzupełnij poniższe pola.
           </p>
+          <fieldset>
+            <legend><b>Dane osobowe</b></legend>
+          <p>
+            <label>Imię:</label>
+            <input class="form__item" id="name" name="name" placeholder="Wpisz swoje imię lub imiona">
+          </p>
+          <p>
+            <label>Nazwisko:</label>
+            <input class="form__item" id="surname" name="surname" placeholder="Wpisz swoje nazwisko">
+          </p>
+        </fieldset>
+          <fieldset>
+            <legend><b>Adres korespondencyjny:</b></legend>
+            <p>
+              <label>Miasto:</label>
+              <input class="form__item" id="city" name="city" placeholder="Wpisz nazwę miasta, w którym mieszkasz">
+            </p>
+            <p>
+              <label>Kod pocztowy:</label>
+              <input class="form__item" id=postcode" name="postcode" placeholder="Wpisz kod pocztowy miasta">
+            </p>
+            <p>
+              <label>Ulica:</label>
+              <input class="form__item" id="street" name="street" placeholder="Wpisz nazwę ulicy, na której mieszkasz">
+            </p>
+
+            <p>
+              <label>Numer domu:</label>
+              <input class="form__item" id="flat-number" name="flat-number" placeholder="Wpisz numer domu/numer mieszkania">
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend><b>Dane kontaktowe:</b></legend>
+            <p>
+              <label>Numer telefonu:</label>
+              <input class="form__item" id="phone-number" name="phone-number" placeholder="Wpisz swój numer telefonu">
+            </p>
+            <p>
+              <label>Adres e-mail:</label>
+              <input class="form__item" id="email-address" name="email-address" placeholder="Wpisz swój adres e-mail">
+            </p>
+          </fieldset>
         </article>
 
         <article class="form__article">
