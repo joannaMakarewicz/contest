@@ -7,3 +7,19 @@ html {
   *:after {
     box-sizing: inherit;
   }
+
+body {
+  background-color: #88bcf2;
+  background-image: linear-gradient(180deg, #88bcf2 25%, #f7e256 100%);
+min-width:100vw;
+min-height:100vh;
+font-size:20px;  
+}
+
+h1 {
+  color: #370617;
+}
+
+h2 {
+  color:#03071E
+}
