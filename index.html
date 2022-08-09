@@ -9,21 +9,21 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <header class="header">
-      <div>
+    <div class="heading"></div>
+
+    <main class="main">
+      <div class="main__heading">
         <h1>Konkurs z nagrodami!</h1>
         <p>
           Witam Cię serdecznie w Konkursie
           <span class="special">"Lato z książką"</span>.<br />
           Wakacje to najlepszy moment na nadrabianie zaległości literackich oraz
-          zdobywanie nowych, ciekawych nagród.<br />
-          <span class="special">Zapraszam Cię do konkursu.</span>
+          zdobywanie nowych, ciekawych nagród. Opowiedz proszę o swoich upodobaniach czytalnicznych. Obiecuję podzielić się z Tobą rekomendacjami pozostałych uczestników Konkursu w osobnym artykule.<br />
+          <span class="special">Zapraszam Cię do Konkursu.</span>
         </p>
       </div>
-    </header>
 
-    <main class="main">
-      <form class="form">
+      <form class="form" method="post" action="https://dev.cotenfrontend.pl">
         <article class="form__article">
           <h2 class="form__heading">Pytanie konkursowe</h2>
           <p class="form__task">
@@ -38,15 +38,25 @@
             </p>
             <p>
               <label>Tytuł:</label>
-              <input class="form__item" id="tittle" name="tittle" placeholder="Wpisz pełny tytuł książki"/>
+              <input
+                class="form__item"
+                id="tittle"
+                name="tittle"
+                placeholder="Wpisz pełny tytuł książki"
+              />
             </p>
             <p>
               <label>Autor:</label>
-              <input class="form__item" id="tittle" name="tittle" placeholder="Wpisz imię i nazwisko autora" />
+              <input
+                class="form__item"
+                id="author"
+                name="author"
+                placeholder="Wpisz imię i nazwisko autora"
+              />
             </p>
             <p>
               <label>Uzasadnienie:</label>
-              <textarea class="form__item" id="tittle" name="tittle">Najbardziej cenię tę właśnie książkę, gdyż...</textarea>
+              <textarea class="form__area" id="assets" name="assets">Najbardziej cenię tę właśnie książkę, gdyż...</textarea>
             </p>
           </div>
         </article>
@@ -56,47 +66,99 @@
           <p class="form__task">
             Pozwól nam poznać Cię lepiej. Uzupełnij poniższe pola.
           </p>
-          <fieldset>
+          <fieldset class="form__question">
             <legend><b>Dane osobowe</b></legend>
-          <p>
-            <label>Imię:</label>
-            <input class="form__item" id="name" name="name" placeholder="Wpisz swoje imię lub imiona">
-          </p>
-          <p>
-            <label>Nazwisko:</label>
-            <input class="form__item" id="surname" name="surname" placeholder="Wpisz swoje nazwisko">
-          </p>
-        </fieldset>
-          <fieldset>
+            <p>
+              <label>Imię:</label>
+              <input
+                class="form__item"
+                id="name"
+                name="name"
+                placeholder="Wpisz swoje imię lub imiona"
+              />
+            </p>
+            <p>
+              <label>Nazwisko:</label>
+              <input
+                class="form__item"
+                id="surname"
+                name="surname"
+                placeholder="Wpisz swoje nazwisko"
+              />
+            </p>
+          </fieldset>
+          <fieldset class="form__question">
             <legend><b>Adres korespondencyjny:</b></legend>
             <p>
               <label>Miasto:</label>
-              <input class="form__item" id="city" name="city" placeholder="Wpisz nazwę miasta, w którym mieszkasz">
+              <input
+                class="form__item"
+                id="city"
+                name="city"
+                placeholder="Wpisz nazwę miasta, w którym mieszkasz"
+              />
             </p>
             <p>
               <label>Kod pocztowy:</label>
-              <input class="form__item" id=postcode" name="postcode" placeholder="Wpisz kod pocztowy miasta">
+              <input 
+              class="form__item" 
+              id="postcode" 
+              name="postcode"
+              placeholder="Wpisz kod pocztowy miasta">
             </p>
             <p>
               <label>Ulica:</label>
-              <input class="form__item" id="street" name="street" placeholder="Wpisz nazwę ulicy, na której mieszkasz">
+              <input
+                class="form__item"
+                id="street"
+                name="street"
+                placeholder="Wpisz nazwę ulicy, na której mieszkasz"
+              />
             </p>
 
             <p>
               <label>Numer domu:</label>
-              <input class="form__item" id="flat-number" name="flat-number" placeholder="Wpisz numer domu/numer mieszkania">
+              <input
+                class="form__item"
+                id="block-number"
+                name="block-number"
+                placeholder="Wpisz numer domu"
+                type="number"
+              />
+            </p>
+            <p>
+              <label>Numer mieszkania:</label>
+              <input
+                class="form__item"
+                id="flat-number"
+                name="flat-number"
+                placeholder="Wpisz numer mieszkania"
+                type="number"
+              />
             </p>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="form__question">
             <legend><b>Dane kontaktowe:</b></legend>
             <p>
               <label>Numer telefonu:</label>
-              <input class="form__item" id="phone-number" name="phone-number" placeholder="Wpisz swój numer telefonu">
+              <input
+                class="form__item"
+                id="phone-number"
+                name="phone-number"
+                placeholder="Wpisz swój numer telefonu"
+                type="tel"
+              />
             </p>
             <p>
               <label>Adres e-mail:</label>
-              <input class="form__item" id="email-address" name="email-address" placeholder="Wpisz swój adres e-mail">
+              <input
+                class="form__item"
+                id="email-address"
+                name="email-address"
+                placeholder="Wpisz swój adres e-mail"
+                type="email"
+              />
             </p>
           </fieldset>
         </article>
@@ -108,9 +170,35 @@
             preferencji. Podpowiedz nam proszę, co sprawiłoby Ci najwięcej
             radości. Wybierz z listy.
           </p>
+          <div class="form__question">
+            <p>
+              <input name="surprise-1" type="checkbox" />
+              <label>Bon do księgarni</label>
+            </p>
+            <p>
+              <input name="surprise-2" type="checkbox" checked />
+              <label>Książka wybrana przez nas</label>
+            </p>
+            <p>
+              <input name="surprise-3" type="checkbox" />
+              <label>Gadżet czytelniczy</label>
+            </p>
+            <p>
+              <input name="surprise-4" type="checkbox" />
+              <label>Inny - wskaż proszę:</label>
+              <textarea
+                class="form__area"
+                id="surprise-other"
+                name="surprise-other"
+              ></textarea>
+            </p>
+          </div>
         </article>
+        <p class="sender">
+          <input  class="sender__button"name="sender" type="submit" value="Wyślij" />
+        </p>
       </form>
-      <footer>Written by makaDesign</footer>
+      <footer class="footer">Written by makaDesign</footer>
     </main>
   </body>
 </html>
