@@ -18,7 +18,9 @@
           Witam Cię serdecznie w Konkursie
           <span class="special">"Lato z książką"</span>.<br />
           Wakacje to najlepszy moment na nadrabianie zaległości literackich oraz
-          zdobywanie nowych, ciekawych nagród. Opowiedz proszę o swoich upodobaniach czytalnicznych. Obiecuję podzielić się z Tobą rekomendacjami pozostałych uczestników Konkursu w osobnym artykule.<br />
+          zdobywanie nowych, ciekawych nagród. Opowiedz proszę o swoich
+          upodobaniach czytalnicznych. Obiecuję podzielić się z Tobą
+          rekomendacjami pozostałych uczestników Konkursu w osobnym artykule.<br />
           <span class="special">Zapraszam Cię do Konkursu.</span>
         </p>
       </div>
@@ -43,6 +45,8 @@
                 id="tittle"
                 name="tittle"
                 placeholder="Wpisz pełny tytuł książki"
+                required
+                maxlength="50"
               />
             </p>
             <p>
@@ -52,11 +56,19 @@
                 id="author"
                 name="author"
                 placeholder="Wpisz imię i nazwisko autora"
+                required
+                maxlength="30"
               />
             </p>
             <p>
               <label>Uzasadnienie:</label>
-              <textarea class="form__area" id="assets" name="assets">Najbardziej cenię tę właśnie książkę, gdyż...</textarea>
+              <input
+                type="text"
+                class="form__area"
+                id="assets"
+                name="assets"
+                maxlength="250"
+              />
             </p>
           </div>
         </article>
@@ -67,7 +79,7 @@
             Pozwól nam poznać Cię lepiej. Uzupełnij poniższe pola.
           </p>
           <fieldset class="form__question">
-            <legend><b>Dane osobowe</b></legend>
+            <legend><b>Dane osobowe:</b></legend>
             <p>
               <label>Imię:</label>
               <input
@@ -75,6 +87,8 @@
                 id="name"
                 name="name"
                 placeholder="Wpisz swoje imię lub imiona"
+                required
+                maxlength="20"
               />
             </p>
             <p>
@@ -84,6 +98,8 @@
                 id="surname"
                 name="surname"
                 placeholder="Wpisz swoje nazwisko"
+                required
+                maxlength="20"
               />
             </p>
           </fieldset>
@@ -96,15 +112,18 @@
                 id="city"
                 name="city"
                 placeholder="Wpisz nazwę miasta, w którym mieszkasz"
+                maxlength="20"
               />
             </p>
             <p>
               <label>Kod pocztowy:</label>
-              <input 
-              class="form__item" 
-              id="postcode" 
-              name="postcode"
-              placeholder="Wpisz kod pocztowy miasta">
+              <input
+                class="form__item"
+                id="postcode"
+                name="postcode"
+                placeholder="Wpisz kod pocztowy miasta"
+                pattern="[0-9]{2}-[0-9]{3}"
+              />
             </p>
             <p>
               <label>Ulica:</label>
@@ -113,6 +132,7 @@
                 id="street"
                 name="street"
                 placeholder="Wpisz nazwę ulicy, na której mieszkasz"
+                maxlength="20"
               />
             </p>
 
@@ -148,6 +168,8 @@
                 name="phone-number"
                 placeholder="Wpisz swój numer telefonu"
                 type="tel"
+                required
+                maxlength="10"
               />
             </p>
             <p>
@@ -158,6 +180,7 @@
                 name="email-address"
                 placeholder="Wpisz swój adres e-mail"
                 type="email"
+                required
               />
             </p>
           </fieldset>
@@ -168,34 +191,48 @@
           <p class="form__task">
             W przypadku wygranej chcemy, aby nagroda była dopasowana do Twoich
             preferencji. Podpowiedz nam proszę, co sprawiłoby Ci najwięcej
-            radości. Wybierz z listy.
+            radości. Wybierz z listy lub wskaż poniżej.
           </p>
           <div class="form__question">
             <p>
-              <input name="surprise-1" type="checkbox" />
+              <input name="surprise" type="radio" value="surprise1" />
               <label>Bon do księgarni</label>
             </p>
             <p>
-              <input name="surprise-2" type="checkbox" checked />
+              <input name="surprise" type="radio" value="surprise2" checked />
               <label>Książka wybrana przez nas</label>
             </p>
             <p>
-              <input name="surprise-3" type="checkbox" />
+              <input name="surprise" type="radio" value="surprise3" />
               <label>Gadżet czytelniczy</label>
             </p>
             <p>
-              <input name="surprise-4" type="checkbox" />
+              <input name="surprise" type="radio" value="surprise4" />
               <label>Inny - wskaż proszę:</label>
-              <textarea
+            </p>
+            <p>
+              <input
+                type="text"
                 class="form__area"
                 id="surprise-other"
                 name="surprise-other"
-              ></textarea>
+              />
             </p>
           </div>
         </article>
-        <p class="sender">
-          <input  class="sender__button"name="sender" type="submit" value="Wyślij" />
+        <p class="ending">
+          <input
+            class="ending__button"
+            name="reset"
+            type="reset"
+            value="Wyczyść formularz"
+          />
+          <input
+            class="ending__button"
+            name="sender"
+            type="submit"
+            value="Wyślij"
+          />
         </p>
       </form>
       <footer class="footer">Written by makaDesign</footer>
