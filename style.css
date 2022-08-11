@@ -42,7 +42,7 @@ body {
 }
 
 .form__area {
-  display: inline-block;
+  text-align: left;
   width: 100%;
   border: none;
   height: 100px;
@@ -52,7 +52,7 @@ body {
 }
 
 .form__article {
-  padding: 20px 0px 40px 0px;
+  padding: 20px 0px;
   border-top: 1px solid white;
 }
 
@@ -110,4 +110,9 @@ h2 {
   font-weight: bold;
   color: #ffec15;
   font-size: 20px;
+}
+
+.special-item {
+  color:red;
+ 
 }

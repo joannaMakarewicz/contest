@@ -39,7 +39,7 @@
               >
             </p>
             <p>
-              <label>Tytuł:</label>
+              <label>Tytuł:<span class="special-item">*</span></label>
               <input
                 class="form__item"
                 id="tittle"
@@ -50,7 +50,7 @@
               />
             </p>
             <p>
-              <label>Autor:</label>
+              <label>Autor:<span class="special-item">*</span></label>
               <input
                 class="form__item"
                 id="author"
@@ -62,13 +62,14 @@
             </p>
             <p>
               <label>Uzasadnienie:</label>
-              <input
-                type="text"
+              <textarea
                 class="form__area"
                 id="assets"
                 name="assets"
                 maxlength="250"
-              />
+              >
+Jest to moja ulubiona książka, gdyż...</textarea
+              >
             </p>
           </div>
         </article>
@@ -81,7 +82,7 @@
           <fieldset class="form__question">
             <legend><b>Dane osobowe:</b></legend>
             <p>
-              <label>Imię:</label>
+              <label>Imię:<span class="special-item">*</span></label>
               <input
                 class="form__item"
                 id="name"
@@ -92,7 +93,7 @@
               />
             </p>
             <p>
-              <label>Nazwisko:</label>
+              <label>Nazwisko:<span class="special-item">*</span></label>
               <input
                 class="form__item"
                 id="surname"
@@ -161,7 +162,7 @@
           <fieldset class="form__question">
             <legend><b>Dane kontaktowe:</b></legend>
             <p>
-              <label>Numer telefonu:</label>
+              <label>Numer telefonu:<span class="special-item">*</span></label>
               <input
                 class="form__item"
                 id="phone-number"
@@ -173,7 +174,7 @@
               />
             </p>
             <p>
-              <label>Adres e-mail:</label>
+              <label>Adres e-mail:<span class="special-item">*</span></label>
               <input
                 class="form__item"
                 id="email-address"
@@ -184,6 +185,7 @@
               />
             </p>
           </fieldset>
+          <p><span class="special-item">*</span> - pole wymagane</p>
         </article>
 
         <article class="form__article">
@@ -211,12 +213,11 @@
               <label>Inny - wskaż proszę:</label>
             </p>
             <p>
-              <input
-                type="text"
+              <textarea
                 class="form__area"
                 id="surprise-other"
                 name="surprise-other"
-              />
+              ></textarea>
             </p>
           </div>
         </article>
@@ -235,7 +236,7 @@
           />
         </p>
       </form>
-      <footer class="footer">Written by makaDesign</footer>
+      <footer class="footer">© 2022 makaDesign</footer>
     </main>
   </body>
 </html>
