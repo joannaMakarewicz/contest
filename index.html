@@ -9,25 +9,31 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="heading"></div>
+    <header class="top">
+      <nav class="navigation navigation--js">
+        <a class="navigation__link special__heading"  href="#question">Pytanie konkursowe</a>
+        <a class="navigation__link special__heading" href="#personal">Opowiedz o sobie</a>
+        <a class="navigation__link special__heading" href="#award">Nagroda</a> 
+      </nav>
+      <button class="hamburger hamburger--js" aria-label="Otwórz menu">Menu</button>
+    </header>
 
     <main class="main">
       <div class="main__heading">
         <h1>Konkurs z nagrodami!</h1>
-        <p>
-          Witam Cię serdecznie w Konkursie
-          <span class="special">"Lato z książką"</span>.<br />
+        <p>Witam Cię serdecznie w Konkursie
+          <span class="special">"Lato z książką"</span>.<br/>
           Wakacje to najlepszy moment na nadrabianie zaległości literackich oraz
           zdobywanie nowych, ciekawych nagród. Opowiedz proszę o swoich
           upodobaniach czytalnicznych. Obiecuję podzielić się z Tobą
-          rekomendacjami pozostałych uczestników Konkursu w osobnym artykule.<br />
-          <span class="special">Zapraszam Cię do Konkursu.</span>
+          rekomendacjami pozostałych uczestników Konkursu w osobnym artykule.<br/>
+          <div class="special">Zapraszam Cię do Konkursu.</div>
         </p>
       </div>
 
       <form class="form" method="post" action="https://dev.cotenfrontend.pl">
         <article class="form__article">
-          <h2 class="form__heading">Pytanie konkursowe</h2>
+          <h2 id="question" class="form__heading">Pytanie konkursowe</h2>
           <p class="form__task">
             Skup się, gdyż za chwilę zaczynamy. Odpowiedz na pytanie i zgarnij
             nagrodę.
@@ -75,7 +81,7 @@ Jest to moja ulubiona książka, gdyż...</textarea
         </article>
 
         <article class="form__article">
-          <h2 class="form__heading">Opowiedz o sobie</h2>
+          <h2 id="personal"  class="form__heading">Opowiedz o sobie</h2>
           <p class="form__task">
             Pozwól nam poznać Cię lepiej. Uzupełnij poniższe pola.
           </p>
@@ -189,7 +195,7 @@ Jest to moja ulubiona książka, gdyż...</textarea
         </article>
 
         <article class="form__article">
-          <h2 class="form__heading">Nagroda</h2>
+          <h2 id="award" class="form__heading">Nagroda</h2>
           <p class="form__task">
             W przypadku wygranej chcemy, aby nagroda była dopasowana do Twoich
             preferencji. Podpowiedz nam proszę, co sprawiłoby Ci najwięcej
@@ -238,5 +244,6 @@ Jest to moja ulubiona książka, gdyż...</textarea
       </form>
       <footer class="footer">© 2022 makaDesign</footer>
     </main>
+    <script src="main.js"></script>
   </body>
 </html>
