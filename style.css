@@ -32,7 +32,7 @@ body {
 
 .footer {
   text-align: center;
-  color: green;
+  color: grey;
   font-size: 15px;
   padding: 40px 0px 5px 0px; }
 
@@ -50,7 +50,7 @@ body {
   border-top: 1px solid white; }
 
 .form__heading::before {
-  content:"⭐";}
+  content: "🌞"; }
 
 .form__item {
   display: block;
@@ -65,6 +65,12 @@ body {
 
 .form__question {
   margin-bottom: 10px; }
+
+.form__item:focus {
+  background: #EDF67D; }
+
+.form__area:focus {
+  background: #EDF67D; }
 
 .hamburger {
   position: absolute;
@@ -101,6 +107,10 @@ h2 {
   .navigation__open {
     display: block;
     background: #fff; }
+
+.navigation__link:hover {
+  color: #3d348b;
+  font-size: 26px; }
 
 .sender {
   width: 100%;
