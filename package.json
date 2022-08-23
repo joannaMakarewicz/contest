@@ -1,0 +1,23 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass":"npx node-sass -w SCSS/style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joannaMakarewicz/contest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joannaMakarewicz/contest/issues"
+  },
+  "homepage": "https://github.com/joannaMakarewicz/contest#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

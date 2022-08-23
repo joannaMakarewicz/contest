@@ -1,11 +1,12 @@
-@charset "UTF-8";
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 body {
   background-color: #88bcf2;
@@ -15,56 +16,63 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 .ending {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; }
-  .ending__button {
+  flex-wrap: wrap;
+  &__button {
     background: #3d348b;
     color: white;
     border: 0;
     border-radius: 5px;
     padding: 5px;
     min-width: 200px;
-    margin: 5px; }
+    margin: 5px;
+  }
+}
 
 .footer {
   text-align: center;
   color: green;
   font-size: 15px;
-  padding: 40px 0px 5px 0px; }
+  padding: 40px 0px 5px 0px;
+}
 
-.form__area {
-  text-align: left;
-  width: 100%;
-  border: none;
-  height: 100px;
-  padding: 5px;
-  border-radius: 5px;
-  font-size: smaller; }
-
-.form__article {
-  padding: 0px;
-  border-top: 1px solid white; }
-
-.form__heading::before {
-  content: "⭐"; }
-
-.form__item {
-  display: block;
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: smaller; }
-
-.form__task {
-  line-height: 20px; }
-
-.form__question {
-  margin-bottom: 10px; }
+.form {
+  &__area {
+    text-align: left;
+    width: 100%;
+    border: none;
+    height: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: smaller;
+  }
+  &__article {
+    padding: 0px;
+    border-top: 1px solid white;
+  }
+  &__heading::before{
+    content:"⭐";
+  }
+  &__item {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: smaller;
+  }
+  &__task {
+    line-height: 20px;
+  }
+  &__question {
+    margin-bottom: 10px;
+  }
+}
 
 .hamburger {
   position: absolute;
@@ -74,48 +82,60 @@ body {
   border: none;
   color: #fff;
   padding: 16px;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
 
 h1 {
   color: #3d348b;
   margin-top: 0;
   padding-top: 20px;
   text-align: center;
-  line-height: 30px; }
+  line-height: 30px;
+}
 
 h2 {
-  color: #191716; }
+  color: #191716;
+}
 
 .main {
-  width: 80%; }
-  .main__heading {
+  width: 80%;
+  &__heading {
     line-height: 20px;
-    padding: 10px 0px; }
+    padding: 10px 0px;
+  }
+}
 
 .navigation {
   padding: 16px;
-  display: none; }
-  .navigation__link {
+  display: none;
+  &__link {
     display: block;
-    text-decoration: none; }
-  .navigation__open {
+    text-decoration: none;
+  }
+  &__open {
     display: block;
-    background: #fff; }
+    background: #fff;
+  }
+}
 
 .sender {
   width: 100%;
-  margin: 0; }
+  margin: 0;
+}
 
 .special {
   font-weight: bold;
   color: #ffec15;
-  font-size: 20px; }
-  .special__heading {
+  font-size: 20px;
+  &__heading {
     color: #3d348b;
     font-weight: bold;
-    line-height: 40px; }
-  .special__item {
-    color: red; }
+    line-height: 40px;
+  }
+  &__item {
+    color: red;
+  }
+}
 
 .top {
   background-image: url("../contest/IMG/image2.jpg");
@@ -124,31 +144,49 @@ h2 {
   margin-top: 0;
   min-height: 200px;
   min-width: 100vw;
-  top: 0; }
+  top: 0;
+}
 
 @media screen and (min-width: 768px) {
   .ending {
-    justify-content: space-around; }
-    .ending__button {
-      margin: 0px; }
-  .form__task {
-    line-height: 40px; }
-  .form__article {
-    padding: 20px 0px; }
-  .hamburger {
-    display: none; }
-  .main {
-    width: 60%; }
-    .main__heading {
+    justify-content: space-around;
+    &__button {
+      margin: 0px;
+    }
+  }
+
+  .form {
+    &__task {
       line-height: 40px;
-      padding: 20px 0px; }
+    }
+    &__article {
+      padding: 20px 0px;
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .main {
+    width: 60%;
+    &__heading {
+      line-height: 40px;
+      padding: 20px 0px;
+    }
+  }
+
   .navigation {
     width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 200px; }
+    min-height: 200px;
+  }
+
   .special__heading {
     font-weight: bold;
     color: #ffec15;
-    font-size: 20px; } }
+    font-size: 20px;
+  }
+}
