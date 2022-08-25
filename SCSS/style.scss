@@ -1,3 +1,9 @@
+@import "modules/form.scss";
+@import "modules/navigation.scss";
+@import "modules/special.scss";
+@import "modules/hamburger.scss";
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+
 html {
   box-sizing: border-box;
 }
@@ -19,78 +25,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.ending {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  &__button {
-    background: #3d348b;
-    color: white;
-    border: 0;
-    border-radius: 5px;
-    padding: 5px;
-    min-width: 200px;
-    margin: 5px;
-  }
-}
-
 .footer {
   text-align: center;
   color: grey;
   font-size: 15px;
   padding: 40px 0px 5px 0px;
-}
-
-.form {
-  &__area {
-    text-align: left;
-    width: 100%;
-    border: none;
-    height: 100px;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: smaller;
-  }
-  &__article {
-    padding: 0px;
-    border-top: 1px solid white;
-  }
-  &__heading::before{
-    content:"🌞";
-  }
-  &__item {
-    display: block;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: smaller;
-  }
-  &__task {
-    line-height: 20px;
-  }
-  &__question {
-    margin-bottom: 10px;
-  }
-}
-
-.form__item:focus {
-  background:#EDF67D;
-}
-
-.form__area:focus {
-  background:#EDF67D;
-}
-
-.hamburger {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: #3d348b;
-  border: none;
-  color: #fff;
-  padding: 16px;
-  border-radius: 5px;
 }
 
 h1 {
@@ -113,44 +52,7 @@ h2 {
   }
 }
 
-.navigation {
-  padding: 16px;
-  display: none;
-  &__link {
-    display: block;
-    text-decoration: none;
-  }
-  &__open {
-    display: block;
-    background:#EDF67D;
-  }
-}
-
-.navigation__link:hover {
-  color:#3d348b;
-  font-size:26px;
-}
-
-.sender {
-  width: 100%;
-  margin: 0;
-}
-
-.special {
-  font-weight: bold;
-  color: #ffec15;
-  font-size: 20px;
-  &__heading {
-    color: #3d348b;
-    font-weight: bold;
-    line-height: 40px;
-  }
-  &__item {
-    color: red;
-  }
-}
-
-.top {
+.header {
   background-image: url("../contest/IMG/image2.jpg");
   background-position: center center;
   background-size: cover;
@@ -161,45 +63,11 @@ h2 {
 }
 
 @media screen and (min-width: 768px) {
-  .ending {
-    justify-content: space-around;
-    &__button {
-      margin: 0px;
-    }
-  }
-
-  .form {
-    &__task {
-      line-height: 40px;
-    }
-    &__article {
-      padding: 20px 0px;
-    }
-  }
-
-  .hamburger {
-    display: none;
-  }
-
   .main {
     width: 60%;
     &__heading {
       line-height: 40px;
       padding: 20px 0px;
     }
-  }
-
-  .navigation {
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 200px;
-  }
-
-  .special__heading {
-    font-weight: bold;
-    color: #ffec15;
-    font-size: 20px;
   }
 }

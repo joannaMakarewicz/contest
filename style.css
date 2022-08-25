@@ -1,41 +1,5 @@
 @charset "UTF-8";
-html {
-  box-sizing: border-box; }
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit; }
-
-body {
-  background-color: #88bcf2;
-  background-image: linear-gradient(180deg, #88bcf2 25%, #f7e256 100%);
-  min-width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif; }
-
-.ending {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
-  .ending__button {
-    background: #3d348b;
-    color: white;
-    border: 0;
-    border-radius: 5px;
-    padding: 5px;
-    min-width: 200px;
-    margin: 5px; }
-
-.footer {
-  text-align: center;
-  color: grey;
-  font-size: 15px;
-  padding: 40px 0px 5px 0px; }
-
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
 .form__area {
   text-align: left;
   width: 100%;
@@ -48,6 +12,20 @@ body {
 .form__article {
   padding: 0px;
   border-top: 1px solid white; }
+
+.form__button {
+  background: #3d348b;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+  min-width: 200px;
+  margin: 5px; }
+
+.form__ending {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
 
 .form__heading::before {
   content: "🌞"; }
@@ -72,6 +50,55 @@ body {
 .form__area:focus {
   background: #EDF67D; }
 
+@media screen and (min-width: 768px) {
+  .form__article {
+    padding: 20px 0px; }
+  .form__button {
+    margin: 0px; }
+  .form__ending {
+    justify-content: space-around; }
+  .form__task {
+    line-height: 40px; } }
+
+.navigation {
+  padding: 16px;
+  display: none; }
+  .navigation__link {
+    display: block;
+    text-decoration: none; }
+  .navigation__open {
+    display: block;
+    background: #EDF67D; }
+
+.navigation__link:hover {
+  color: #3d348b;
+  font-size: 26px; }
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 200px; } }
+
+.special {
+  font-weight: bold;
+  color: #ffec15;
+  font-size: 20px; }
+  .special__heading {
+    color: #3d348b;
+    font-weight: bold;
+    line-height: 40px; }
+  .special__item {
+    color: red; }
+
+@media screen and (min-width: 768px) {
+  .special__heading {
+    font-weight: bold;
+    color: #ffec15;
+    font-size: 20px; } }
+
 .hamburger {
   position: absolute;
   top: 16px;
@@ -81,6 +108,34 @@ body {
   color: #fff;
   padding: 16px;
   border-radius: 5px; }
+
+@media screen and (min-width: 768px) {
+  .hamburger {
+    display: none; } }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  background-color: #88bcf2;
+  background-image: linear-gradient(180deg, #88bcf2 25%, #f7e256 100%);
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.footer {
+  text-align: center;
+  color: grey;
+  font-size: 15px;
+  padding: 40px 0px 5px 0px; }
 
 h1 {
   color: #3d348b;
@@ -98,36 +153,7 @@ h2 {
     line-height: 20px;
     padding: 10px 0px; }
 
-.navigation {
-  padding: 16px;
-  display: none; }
-  .navigation__link {
-    display: block;
-    text-decoration: none; }
-  .navigation__open {
-    display: block;
-    background: #EDF67D; }
-
-.navigation__link:hover {
-  color: #3d348b;
-  font-size: 26px; }
-
-.sender {
-  width: 100%;
-  margin: 0; }
-
-.special {
-  font-weight: bold;
-  color: #ffec15;
-  font-size: 20px; }
-  .special__heading {
-    color: #3d348b;
-    font-weight: bold;
-    line-height: 40px; }
-  .special__item {
-    color: red; }
-
-.top {
+.header {
   background-image: url("../contest/IMG/image2.jpg");
   background-position: center center;
   background-size: cover;
@@ -137,28 +163,8 @@ h2 {
   top: 0; }
 
 @media screen and (min-width: 768px) {
-  .ending {
-    justify-content: space-around; }
-    .ending__button {
-      margin: 0px; }
-  .form__task {
-    line-height: 40px; }
-  .form__article {
-    padding: 20px 0px; }
-  .hamburger {
-    display: none; }
   .main {
     width: 60%; }
     .main__heading {
       line-height: 40px;
-      padding: 20px 0px; }
-  .navigation {
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 200px; }
-  .special__heading {
-    font-weight: bold;
-    color: #ffec15;
-    font-size: 20px; } }
+      padding: 20px 0px; } }
