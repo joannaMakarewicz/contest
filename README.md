@@ -2,7 +2,7 @@
 
 Project is a form for a summer competition. You have one main question and than several different kind of data to fill into form. The form includes validations.
 
-You can check this Project here: https://joannamakarewicz.github.io/contest-webpack/
+You can check this Project here: https://joannamakarewicz.github.io/contest/
 
 ## Contents
 
